@@ -15,21 +15,20 @@ $(function(){
 
     });
 
-    $('.menu-btn').on('click', function(){
+    $(document).on('click','.menu-btn', function(){
 
         $('.menu').toggleClass('active');
         $(this).toggleClass('active');
 
     });
 
-    $('.page-menu-btn').on('click', function(){
+    $(document).on('click','.page-menu-btn', function(){
 
         $('.page-menu ul').toggleClass('active');
-        //$(this).toggleClass('active');
 
     });
 
-    $('.client-select').on('click', function(){
+    $(document).on('click','.client-select', function(){
 
         $(this).toggleClass('active');
 

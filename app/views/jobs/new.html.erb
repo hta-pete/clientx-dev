@@ -1,0 +1,23 @@
+<div class="new-job-form">
+
+	<%= form_for @job do |f| %>
+
+	  <div class="field">
+	  	<%= f.text_field :title, placeholder: "Job title"  %>
+	  </div>
+	  <div class="field">
+	  	<%= f.text_area :description, placeholder: "Job description"  %>
+	  </div>
+	  <div class="field">
+	  	<%= f.text_field :location, placeholder: "Job location"  %>
+	  </div>
+	  <div class="field">
+	  	<%= f.text_field :phone, placeholder: "Job phone number"  %>
+	  </div>
+	  <div class="field">
+		<%= f.submit "Create Job", class: "btn_primary" %>
+	  </div>
+
+	<% end %>
+
+</div>

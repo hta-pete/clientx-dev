@@ -1,0 +1,39 @@
+<div class="sign-in-form">
+
+  <div class="form-header"><span class="logo"><%= image_tag("logo.png", height: "80") %></span></div>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+    <div class="field">
+      <%= f.file_field :avatar %>
+    </div>
+    <div class="field">
+      <%= f.text_field :firstname, autofocus: true, placeholder: "First name" %>
+    </div>
+    <div class="field">
+      <%= f.text_field :lastname, placeholder: "Last name" %>
+    </div>
+    <div class="field">
+      <%= f.text_field :company, placeholder: "Company name" %>
+    </div>
+    <div class="field">
+      <%= f.email_field :email, placeholder: "Your email" %>
+    </div>
+    <div class="field">
+      <%= f.password_field :password, placeholder: "Password" %>
+    </div>
+    <div class="field">
+      <%= f.password_field :password_confirmation, placeholder: "Confirm password" %>
+    </div>
+    <div class="field">
+      <%= f.submit "Sign Up", class: "btn_primary" %>
+    </div>
+
+  <% end %>
+  <div class="devise-shared-links">
+    <%= render "devise/shared/links" %> 
+  </div>
+
+</div>
+

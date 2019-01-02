@@ -1,0 +1,71 @@
+<div class="page-header clearfix container">
+	<h2 class="page-heading">Jobs</h2>
+    <div class="page-menu">
+    	<div class="page-menu-btn">
+        	<span>•</span><span>•</span><span>•</span>
+        </div>
+		<ul>	
+			<li class="active"><a href="">Jobs</a></li>
+			<li><a href="">Categories</a></li>
+			<li><a href="">Feeds</a></li>
+			<li><a href="">Reports</a></li>
+			<li><a href="">Shortform</a></li>
+			<li><a href="">Add City</a></li>
+			<li><a href="">Aggregators</a></li>
+			<li><a href="">Social Media Feed</a></li>
+			<li><a href="">Tenstreet Import</a></li>
+			<li><a href="">Import Jobs</a></li>
+			<li><a href="">Generate Jibe Feed</a></li>
+		</ul>
+	</div>
+	<div class="page-header-right">
+		<a href="" class="btn_primary">Create Job</a>
+	</div>
+</div>
+<div class="cx-list cx-job-list container">
+	<div class="cx-list-header">
+		<div class="row clearfix">
+			<div class="col-5 center-align">ID</div>
+			<div class="col-30">Title</div>
+			<div class="col-10">Status</div>
+			<div class="col-8 center-align">Locations</div>
+			<div class="col-10">Category</div>
+			<div class="col-13">Referral</div>
+			
+			<div class="col-12">Last Edit</div>
+			<div class="col-12 center-align">Actions</div>
+		</div>
+	</div>
+	<div class="cx-listings">
+
+		<% @jobs.each do |job| %>
+
+			<div class="cx-listings-item">
+				<div class="row clearfix">
+					<div class="col-5 flex-all"><%= job.id %></div>
+					<div class="col-30 flex-v"><a href="<%= job_path(job) %>"><%= job.title %></a></div>
+					<div class="col-10 flex-v">
+						<div class="cx-list-toggle-wrap clearfix open">
+							<span class="cx-list-status"></span> <span class="cx-list-toggle"></span>
+						</div>
+					</div>
+					<div class="col-8 flex-all">2</div>
+					<div class="col-10 flex-v">Company Driver</div>
+					<div class="col-13 flex-v">Google-Ad</div>
+					
+					<div class="col-12 flex-v">08/23/2018<br> @2:13 pm</div>
+					<div class="col-12 flex-v">
+						<ul class="cx-list-actions">
+							<li><i class="fa fa-pencil"></i></li>
+							<li><i class="fa fa-copy"></i></li>
+							<li><i class="fa fa-print"></i></li>
+							<li><i class="fa fa-close"></i></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		<% end %>
+
+	</div><!-- end .cx-listings -->
+</div>
