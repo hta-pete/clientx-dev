@@ -9,6 +9,12 @@
 	  	<%= f.text_field :location, placeholder: "Job location"  %>
 	  </div>
 	  <div class="field">
+	  	<%= f.text_field :referral, placeholder: "Job referral"  %>
+	  </div>
+	  <div class="field">
+	  	<%= f.select :category, [ 'Company Driver', 'Owner Operator', 'Dedicated', 'Local' ], :prompt => 'Select a category' %>
+	  </div>
+	  <div class="field">
 	  	<%= f.text_field :phone, placeholder: "Job phone number"  %>
 	  </div>
 	  <div class="field">

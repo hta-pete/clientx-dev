@@ -5338,3 +5338,871 @@ Processing by JobsController#new as HTML
 Completed 200 OK in 66ms (Views: 46.9ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 08:00:57 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (1.9ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.2ms)
+Completed 200 OK in 25ms (Views: 21.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RG5Sb2RXMWlibUZwYkVraURURXdNSGd4TURCZUJqb0dSVlE2REdkeVlYWnBkSGxKSWd0alpXNTBaWElHT3dkVU9ndGxlSFJsYm5SSklnd3hNREI0TVRBd0Jqc0hWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c974a2eecde35cd894360256b5bac8f53de20401/pete.png" for 127.0.0.1 at 2019-01-03 08:00:57 -0600
+Processing by ActiveStorage::RepresentationsController#show as PNG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RG5Sb2RXMWlibUZwYkVraURURXdNSGd4TURCZUJqb0dSVlE2REdkeVlYWnBkSGxKSWd0alpXNTBaWElHT3dkVU9ndGxlSFJsYm5SSklnd3hNREI0TVRBd0Jqc0hWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c974a2eecde35cd894360256b5bac8f53de20401", "filename"=>"pete"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.0ms) [0m[34mChecked if file exists at key: variants/EYyyePjCsdmjLCi1kypPvzvA/3b979a957c74904d98fb8dd020b07d2a09b0facd5c2cd16a0bb14f65e170f5b8 (yes)[0m
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: variants/EYyyePjCsdmjLCi1kypPvzvA/3b979a957c74904d98fb8dd020b07d2a09b0facd5c2cd16a0bb14f65e170f5b8 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjA1OjU3LjYyMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--506911b08113e3493d79ecc0f051ec8a899be7dd/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjA1OjU3LjYyMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--506911b08113e3493d79ecc0f051ec8a899be7dd/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjA1OjU3LjYyMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--506911b08113e3493d79ecc0f051ec8a899be7dd/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:00:57 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjA1OjU3LjYyMVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--506911b08113e3493d79ecc0f051ec8a899be7dd", "filename"=>"pete"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to AddFieldsToJobs (20190103140203)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "jobs" ADD "category" varchar[0m
+  ↳ db/migrate/20190103140203_add_fields_to_jobs.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "jobs" ADD "referral" varchar[0m
+  ↳ db/migrate/20190103140203_add_fields_to_jobs.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190103140203"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 08:07:16 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (7.5ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (19.7ms)
+Completed 200 OK in 60ms (Views: 47.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RG5Sb2RXMWlibUZwYkVraURURXdNSGd4TURCZUJqb0dSVlE2REdkeVlYWnBkSGxKSWd0alpXNTBaWElHT3dkVU9ndGxlSFJsYm5SSklnd3hNREI0TVRBd0Jqc0hWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c974a2eecde35cd894360256b5bac8f53de20401/pete.png" for 127.0.0.1 at 2019-01-03 08:07:17 -0600
+Processing by ActiveStorage::RepresentationsController#show as PNG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RG5Sb2RXMWlibUZwYkVraURURXdNSGd4TURCZUJqb0dSVlE2REdkeVlYWnBkSGxKSWd0alpXNTBaWElHT3dkVU9ndGxlSFJsYm5SSklnd3hNREI0TVRBd0Jqc0hWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c974a2eecde35cd894360256b5bac8f53de20401", "filename"=>"pete"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.0ms) [0m[34mChecked if file exists at key: variants/EYyyePjCsdmjLCi1kypPvzvA/3b979a957c74904d98fb8dd020b07d2a09b0facd5c2cd16a0bb14f65e170f5b8 (yes)[0m
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: variants/EYyyePjCsdmjLCi1kypPvzvA/3b979a957c74904d98fb8dd020b07d2a09b0facd5c2cd16a0bb14f65e170f5b8 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjEyOjE3LjA5NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6f1ec524288c739baa5cf5d2e87e6c9443653737/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjEyOjE3LjA5NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6f1ec524288c739baa5cf5d2e87e6c9443653737/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjEyOjE3LjA5NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6f1ec524288c739baa5cf5d2e87e6c9443653737/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:07:17 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjEyOjE3LjA5NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6f1ec524288c739baa5cf5d2e87e6c9443653737", "filename"=>"pete"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2019-01-03 08:07:18 -0600
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/new.html.erb within layouts/application (25.2ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.6ms)
+Completed 200 OK in 50ms (Views: 46.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2019-01-03 08:08:25 -0600
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/new.html.erb within layouts/application (1.6ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.3ms)
+Completed 200 OK in 980ms (Views: 975.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjEyOjE3LjA5NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6f1ec524288c739baa5cf5d2e87e6c9443653737/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:08:26 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjEyOjE3LjA5NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6f1ec524288c739baa5cf5d2e87e6c9443653737", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2019-01-03 08:08:51 -0600
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/new.html.erb within layouts/application (1.5ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (4.5ms)
+Completed 200 OK in 311ms (Views: 306.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjEyOjE3LjA5NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6f1ec524288c739baa5cf5d2e87e6c9443653737/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:08:52 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjEyOjE3LjA5NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6f1ec524288c739baa5cf5d2e87e6c9443653737", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2019-01-03 08:09:10 -0600
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/new.html.erb within layouts/application (1.4ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.6ms)
+Completed 200 OK in 319ms (Views: 315.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjEyOjE3LjA5NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6f1ec524288c739baa5cf5d2e87e6c9443653737/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:09:10 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjEyOjE3LjA5NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6f1ec524288c739baa5cf5d2e87e6c9443653737", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2019-01-03 08:09:17 -0600
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/new.html.erb within layouts/application (1.5ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.0ms)
+Completed 200 OK in 27ms (Views: 23.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjEyOjE3LjA5NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6f1ec524288c739baa5cf5d2e87e6c9443653737/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:09:17 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjEyOjE3LjA5NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6f1ec524288c739baa5cf5d2e87e6c9443653737", "filename"=>"pete"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms)
+
+
+  [1m[36mJob Destroy (5.6ms)[0m  [1m[31mDELETE FROM "jobs"[0m
+Started GET "/jobs/new" for 127.0.0.1 at 2019-01-03 08:10:38 -0600
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/new.html.erb within layouts/application (1.4ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (2.9ms)
+Completed 200 OK in 26ms (Views: 22.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjEyOjE3LjA5NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6f1ec524288c739baa5cf5d2e87e6c9443653737/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:10:38 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjEyOjE3LjA5NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6f1ec524288c739baa5cf5d2e87e6c9443653737", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2019-01-03 08:10:40 -0600
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/new.html.erb within layouts/application (1.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.2ms)
+Completed 200 OK in 24ms (Views: 20.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjEyOjE3LjA5NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6f1ec524288c739baa5cf5d2e87e6c9443653737/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:10:40 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjEyOjE3LjA5NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6f1ec524288c739baa5cf5d2e87e6c9443653737", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2019-01-03 08:11:45 -0600
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LOMYStSk9a7rG/aCsx3k3F7++sEKiuiO++svAfvQUPoXVnqP16zzmnctJSylJq+9GqVCtd1qdZuHAUb8Sssf1g==", "job"=>{"title"=>"Local Gas Delivery Driver", "location"=>"Baton Rouge, LA", "referral"=>"Google", "category"=>"Local", "phone"=>"504-958-9587", "description"=>"Lorem ipsum dolor amet you probably haven't heard of them sustainable church-key, locavore bespoke af poke. Fanny pack pop-up 8-bit scenester affogato single-origin coffee selfies meggings banjo freegan occupy kogi. Everyday carry lomo iPhone meditation, YOLO banh mi edison bulb portland. Hashtag before they sold out fixie offal YOLO keffiyeh +1 direct trade vape tattooed. Yuccie before they sold out hashtag fam direct trade celiac cloud bread lumbersexual small batch. You probably haven't heard of them mixtape marfa DIY vaporware.\r\n\r\nWhatever health goth chicharrones normcore, taxidermy kombucha cliche fixie taiyaki sartorial truffaut hoodie schlitz art party pork belly. Readymade irony master cleanse ethical woke umami gastropub coloring book. Mlkshk squid cornhole, salvia actually pabst chartreuse you probably haven't heard of them. Readymade air plant edison bulb man braid. Prism jianbing roof party, mixtape listicle williamsburg lomo cronut shaman vegan tofu fanny pack."}, "commit"=>"Create Job"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/jobs_controller.rb:9
+  [1m[36mJob Create (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "description", "phone", "location", "created_at", "updated_at", "user_id", "category", "referral") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Local Gas Delivery Driver"], ["description", "Lorem ipsum dolor amet you probably haven't heard of them sustainable church-key, locavore bespoke af poke. Fanny pack pop-up 8-bit scenester affogato single-origin coffee selfies meggings banjo freegan occupy kogi. Everyday carry lomo iPhone meditation, YOLO banh mi edison bulb portland. Hashtag before they sold out fixie offal YOLO keffiyeh +1 direct trade vape tattooed. Yuccie before they sold out hashtag fam direct trade celiac cloud bread lumbersexual small batch. You probably haven't heard of them mixtape marfa DIY vaporware.\r\n\r\nWhatever health goth chicharrones normcore, taxidermy kombucha cliche fixie taiyaki sartorial truffaut hoodie schlitz art party pork belly. Readymade irony master cleanse ethical woke umami gastropub coloring book. Mlkshk squid cornhole, salvia actually pabst chartreuse you probably haven't heard of them. Readymade air plant edison bulb man braid. Prism jianbing roof party, mixtape listicle williamsburg lomo cronut shaman vegan tofu fanny pack."], ["phone", "504-958-9587"], ["location", "Baton Rouge, LA"], ["created_at", "2019-01-03 14:11:45.606007"], ["updated_at", "2019-01-03 14:11:45.606007"], ["user_id", 1], ["category", "Local"], ["referral", "Google"]]
+  ↳ app/controllers/jobs_controller.rb:9
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/jobs_controller.rb:9
+Redirected to http://localhost:3000/job-board
+Completed 302 Found in 23ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 08:11:45 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (1.4ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.8ms)
+Completed 200 OK in 27ms (Views: 23.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjEyOjE3LjA5NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6f1ec524288c739baa5cf5d2e87e6c9443653737/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:11:45 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjEyOjE3LjA5NVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--6f1ec524288c739baa5cf5d2e87e6c9443653737", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 08:15:11 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (1.9ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.4ms)
+Completed 200 OK in 29ms (Views: 24.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RG5Sb2RXMWlibUZwYkVraURURXdNSGd4TURCZUJqb0dSVlE2REdkeVlYWnBkSGxKSWd0alpXNTBaWElHT3dkVU9ndGxlSFJsYm5SSklnd3hNREI0TVRBd0Jqc0hWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c974a2eecde35cd894360256b5bac8f53de20401/pete.png" for 127.0.0.1 at 2019-01-03 08:15:11 -0600
+Processing by ActiveStorage::RepresentationsController#show as PNG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RG5Sb2RXMWlibUZwYkVraURURXdNSGd4TURCZUJqb0dSVlE2REdkeVlYWnBkSGxKSWd0alpXNTBaWElHT3dkVU9ndGxlSFJsYm5SSklnd3hNREI0TVRBd0Jqc0hWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c974a2eecde35cd894360256b5bac8f53de20401", "filename"=>"pete"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.0ms) [0m[34mChecked if file exists at key: variants/EYyyePjCsdmjLCi1kypPvzvA/3b979a957c74904d98fb8dd020b07d2a09b0facd5c2cd16a0bb14f65e170f5b8 (yes)[0m
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: variants/EYyyePjCsdmjLCi1kypPvzvA/3b979a957c74904d98fb8dd020b07d2a09b0facd5c2cd16a0bb14f65e170f5b8 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjIwOjExLjcyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--117be031a90f7a1873448e4c8eb1df70ade1187c/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjIwOjExLjcyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--117be031a90f7a1873448e4c8eb1df70ade1187c/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjIwOjExLjcyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--117be031a90f7a1873448e4c8eb1df70ade1187c/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:15:11 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjIwOjExLjcyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--117be031a90f7a1873448e4c8eb1df70ade1187c", "filename"=>"pete"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 08:15:20 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  Rendered pages/job_board.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+
+  
+SyntaxError (/Users/pkatsaboulas/sites/clientx-dev/app/views/pages/job_board.html.erb:50: syntax error, unexpected tIDENTIFIER, expecting ')'
+o_in_words(job.updated_at) ago );@output_buffer.safe_append=
+                              ^):
+  
+app/views/pages/job_board.html.erb:50: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 08:15:29 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (2.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.3ms)
+Completed 200 OK in 28ms (Views: 24.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjIwOjExLjcyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--117be031a90f7a1873448e4c8eb1df70ade1187c/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:15:29 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjIwOjExLjcyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--117be031a90f7a1873448e4c8eb1df70ade1187c", "filename"=>"pete"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 08:15:44 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (1.8ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (2.9ms)
+Completed 200 OK in 27ms (Views: 23.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjIwOjExLjcyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--117be031a90f7a1873448e4c8eb1df70ade1187c/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:15:44 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjIwOjExLjcyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--117be031a90f7a1873448e4c8eb1df70ade1187c", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 08:17:39 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (1.6ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.1ms)
+Completed 200 OK in 27ms (Views: 23.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjIwOjExLjcyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--117be031a90f7a1873448e4c8eb1df70ade1187c/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:17:39 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjIwOjExLjcyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--117be031a90f7a1873448e4c8eb1df70ade1187c", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 08:20:07 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (1.4ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.6ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjIwOjExLjcyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--117be031a90f7a1873448e4c8eb1df70ade1187c/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:20:07 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjIwOjExLjcyN1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--117be031a90f7a1873448e4c8eb1df70ade1187c", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 08:21:35 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (1.5ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.6ms)
+Completed 200 OK in 27ms (Views: 24.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RG5Sb2RXMWlibUZwYkVraURURXdNSGd4TURCZUJqb0dSVlE2REdkeVlYWnBkSGxKSWd0alpXNTBaWElHT3dkVU9ndGxlSFJsYm5SSklnd3hNREI0TVRBd0Jqc0hWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c974a2eecde35cd894360256b5bac8f53de20401/pete.png" for 127.0.0.1 at 2019-01-03 08:21:35 -0600
+Processing by ActiveStorage::RepresentationsController#show as PNG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RG5Sb2RXMWlibUZwYkVraURURXdNSGd4TURCZUJqb0dSVlE2REdkeVlYWnBkSGxKSWd0alpXNTBaWElHT3dkVU9ndGxlSFJsYm5SSklnd3hNREI0TVRBd0Jqc0hWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c974a2eecde35cd894360256b5bac8f53de20401", "filename"=>"pete"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.0ms) [0m[34mChecked if file exists at key: variants/EYyyePjCsdmjLCi1kypPvzvA/3b979a957c74904d98fb8dd020b07d2a09b0facd5c2cd16a0bb14f65e170f5b8 (yes)[0m
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: variants/EYyyePjCsdmjLCi1kypPvzvA/3b979a957c74904d98fb8dd020b07d2a09b0facd5c2cd16a0bb14f65e170f5b8 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjI2OjM1LjkzM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--5913bb22db1d9fdbbca43ff5d066ac1130cb6b17/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjI2OjM1LjkzM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--5913bb22db1d9fdbbca43ff5d066ac1130cb6b17/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjI2OjM1LjkzM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--5913bb22db1d9fdbbca43ff5d066ac1130cb6b17/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:21:35 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjI2OjM1LjkzM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--5913bb22db1d9fdbbca43ff5d066ac1130cb6b17", "filename"=>"pete"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 08:22:27 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (1.7ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.5ms)
+Completed 200 OK in 28ms (Views: 24.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjI2OjM1LjkzM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--5913bb22db1d9fdbbca43ff5d066ac1130cb6b17/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:22:27 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjI2OjM1LjkzM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--5913bb22db1d9fdbbca43ff5d066ac1130cb6b17", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 08:22:43 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (1.8ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.1ms)
+Completed 200 OK in 28ms (Views: 24.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjI2OjM1LjkzM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--5913bb22db1d9fdbbca43ff5d066ac1130cb6b17/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:22:43 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjI2OjM1LjkzM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--5913bb22db1d9fdbbca43ff5d066ac1130cb6b17", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2019-01-03 08:23:26 -0600
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/new.html.erb within layouts/application (1.6ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.2ms)
+Completed 200 OK in 29ms (Views: 25.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2019-01-03 08:24:09 -0600
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A7P27kKnCaFrSCaKtuO+MwHF2InQhXFQSrYVMMaXjhgalNnujc4bK8euAx4+PjBpf1CGJZGaQ7Dd90nm5BMOVw==", "job"=>{"title"=>"Hiring Owner Operators in Tulsa", "location"=>"Tulsa, OK", "referral"=>"Indeed", "category"=>"Owner Operator", "phone"=>"854-547-2014", "description"=>"We need you!"}, "commit"=>"Create Job"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/jobs_controller.rb:9
+  [1m[36mJob Create (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "description", "phone", "location", "created_at", "updated_at", "user_id", "category", "referral") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Hiring Owner Operators in Tulsa"], ["description", "We need you!"], ["phone", "854-547-2014"], ["location", "Tulsa, OK"], ["created_at", "2019-01-03 14:24:09.848623"], ["updated_at", "2019-01-03 14:24:09.848623"], ["user_id", 1], ["category", "Owner Operator"], ["referral", "Indeed"]]
+  ↳ app/controllers/jobs_controller.rb:9
+  [1m[35m (39.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/jobs_controller.rb:9
+Redirected to http://localhost:3000/job-board
+Completed 302 Found in 44ms (ActiveRecord: 40.0ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 08:24:09 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (1.6ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (6.8ms)
+Completed 200 OK in 28ms (Views: 24.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjI2OjM1LjkzM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--5913bb22db1d9fdbbca43ff5d066ac1130cb6b17/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:24:09 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjI2OjM1LjkzM1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--5913bb22db1d9fdbbca43ff5d066ac1130cb6b17", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 08:56:35 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (2.3ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (4.9ms)
+Completed 200 OK in 30ms (Views: 25.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RG5Sb2RXMWlibUZwYkVraURURXdNSGd4TURCZUJqb0dSVlE2REdkeVlYWnBkSGxKSWd0alpXNTBaWElHT3dkVU9ndGxlSFJsYm5SSklnd3hNREI0TVRBd0Jqc0hWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c974a2eecde35cd894360256b5bac8f53de20401/pete.png" for 127.0.0.1 at 2019-01-03 08:56:35 -0600
+Processing by ActiveStorage::RepresentationsController#show as PNG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RG5Sb2RXMWlibUZwYkVraURURXdNSGd4TURCZUJqb0dSVlE2REdkeVlYWnBkSGxKSWd0alpXNTBaWElHT3dkVU9ndGxlSFJsYm5SSklnd3hNREI0TVRBd0Jqc0hWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c974a2eecde35cd894360256b5bac8f53de20401", "filename"=>"pete"}
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.0ms) [0m[34mChecked if file exists at key: variants/EYyyePjCsdmjLCi1kypPvzvA/3b979a957c74904d98fb8dd020b07d2a09b0facd5c2cd16a0bb14f65e170f5b8 (yes)[0m
+[36m  Disk Storage (0.3ms) [0m[34mGenerated URL for file at key: variants/EYyyePjCsdmjLCi1kypPvzvA/3b979a957c74904d98fb8dd020b07d2a09b0facd5c2cd16a0bb14f65e170f5b8 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE1OjAxOjM1LjM5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fcc046d015a373670a2fd4fe8d0a2330d12321b/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE1OjAxOjM1LjM5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fcc046d015a373670a2fd4fe8d0a2330d12321b/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE1OjAxOjM1LjM5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fcc046d015a373670a2fd4fe8d0a2330d12321b/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:56:35 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE1OjAxOjM1LjM5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fcc046d015a373670a2fd4fe8d0a2330d12321b", "filename"=>"pete"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 08:56:58 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (no implicit conversion of ActiveSupport::TimeWithZone into Integer):
+    47: 					<div class="col-10 flex-v"><%= job.category %></div>
+    48: 					<div class="col-13 flex-v"><%= job.referral %></div>
+    49: 					
+    50: 					<div class="col-12 flex-v"><%= Time.zone.local( job.updated_at ) %></div>
+    51: 					<div class="col-12 flex-v">
+    52: 						<ul class="cx-list-actions">
+    53: 							<li><i class="fa fa-pencil"></i></li>
+  
+app/views/pages/job_board.html.erb:50:in `block in _app_views_pages_job_board_html_erb___885518463983823893_70168398314820'
+app/views/pages/job_board.html.erb:40:in `_app_views_pages_job_board_html_erb___885518463983823893_70168398314820'
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 08:57:23 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (2.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.1ms)
+Completed 200 OK in 28ms (Views: 24.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE1OjAxOjM1LjM5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fcc046d015a373670a2fd4fe8d0a2330d12321b/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:57:23 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE1OjAxOjM1LjM5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fcc046d015a373670a2fd4fe8d0a2330d12321b", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 08:58:23 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (1.9ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.7ms)
+Completed 200 OK in 28ms (Views: 25.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE1OjAxOjM1LjM5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fcc046d015a373670a2fd4fe8d0a2330d12321b/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:58:23 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE1OjAxOjM1LjM5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fcc046d015a373670a2fd4fe8d0a2330d12321b", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 08:58:24 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (1.5ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.2ms)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE1OjAxOjM1LjM5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fcc046d015a373670a2fd4fe8d0a2330d12321b/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:58:24 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE1OjAxOjM1LjM5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fcc046d015a373670a2fd4fe8d0a2330d12321b", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2019-01-03 08:58:27 -0600
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/new.html.erb within layouts/application (1.3ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.2ms)
+Completed 200 OK in 26ms (Views: 22.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2019-01-03 08:58:32 -0600
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Mrn4DsCXES7BO05oJ6sHQbi4Pkvv0bHhCuxe4CgBZXUrntcOD/4DpG3da/yvdokbxi1g567OgwGdrQI2CoXlOg==", "job"=>{"title"=>"test", "location"=>"", "referral"=>"", "category"=>"", "phone"=>"", "description"=>""}, "commit"=>"Create Job"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/jobs_controller.rb:9
+  [1m[36mJob Create (0.4ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "description", "phone", "location", "created_at", "updated_at", "user_id", "category", "referral") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "test"], ["description", ""], ["phone", ""], ["location", ""], ["created_at", "2019-01-03 14:58:32.954795"], ["updated_at", "2019-01-03 14:58:32.954795"], ["user_id", 1], ["category", ""], ["referral", ""]]
+  ↳ app/controllers/jobs_controller.rb:9
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/jobs_controller.rb:9
+Redirected to http://localhost:3000/job-board
+Completed 302 Found in 13ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 08:58:32 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (1.4ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.3ms)
+Completed 200 OK in 29ms (Views: 20.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE1OjAxOjM1LjM5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fcc046d015a373670a2fd4fe8d0a2330d12321b/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:58:33 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE1OjAxOjM1LjM5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fcc046d015a373670a2fd4fe8d0a2330d12321b", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 08:58:52 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (1.5ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.3ms)
+Completed 200 OK in 27ms (Views: 23.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE1OjAxOjM1LjM5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fcc046d015a373670a2fd4fe8d0a2330d12321b/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:58:52 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE1OjAxOjM1LjM5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fcc046d015a373670a2fd4fe8d0a2330d12321b", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2019-01-03 08:58:55 -0600
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/new.html.erb within layouts/application (1.2ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.8ms)
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2019-01-03 08:58:59 -0600
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3cI6o93bzW4v4Gc5lFfkB25KSy+jdNDAggcANzLoh97E5RWjErLf5IMGQq0cimpdEN8Vg+Jr4iAVRlzhEGwHkQ==", "job"=>{"title"=>"test 3", "location"=>"", "referral"=>"", "category"=>"", "phone"=>"", "description"=>""}, "commit"=>"Create Job"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/jobs_controller.rb:9
+  [1m[36mJob Create (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "description", "phone", "location", "created_at", "updated_at", "user_id", "category", "referral") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "test 3"], ["description", ""], ["phone", ""], ["location", ""], ["created_at", "2019-01-03 14:58:59.217912"], ["updated_at", "2019-01-03 14:58:59.217912"], ["user_id", 1], ["category", ""], ["referral", ""]]
+  ↳ app/controllers/jobs_controller.rb:9
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/jobs_controller.rb:9
+Redirected to http://localhost:3000/job-board
+Completed 302 Found in 5ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 08:58:59 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (1.4ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.3ms)
+Completed 200 OK in 38ms (Views: 21.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE1OjAxOjM1LjM5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fcc046d015a373670a2fd4fe8d0a2330d12321b/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:58:59 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE1OjAxOjM1LjM5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fcc046d015a373670a2fd4fe8d0a2330d12321b", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 08:59:36 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (2.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.3ms)
+Completed 200 OK in 33ms (Views: 29.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE1OjAxOjM1LjM5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fcc046d015a373670a2fd4fe8d0a2330d12321b/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:59:36 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE1OjAxOjM1LjM5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fcc046d015a373670a2fd4fe8d0a2330d12321b", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2019-01-03 08:59:38 -0600
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/new.html.erb within layouts/application (1.3ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.0ms)
+Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/jobs" for 127.0.0.1 at 2019-01-03 08:59:42 -0600
+Processing by JobsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gx+UIQF+mkSzkWcxFY3bZ2M0rZR7n4xzaL1JEQy40kiaOLshzheIzh93QqWdUFU9HaHzODqAvpP//BXHLjxSBw==", "job"=>{"title"=>"test6", "location"=>"", "referral"=>"", "category"=>"", "phone"=>"", "description"=>""}, "commit"=>"Create Job"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:8
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/jobs_controller.rb:9
+  [1m[36mJob Create (0.3ms)[0m  [1m[32mINSERT INTO "jobs" ("title", "description", "phone", "location", "created_at", "updated_at", "user_id", "category", "referral") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["title", "test6"], ["description", ""], ["phone", ""], ["location", ""], ["created_at", "2019-01-03 14:59:42.115426"], ["updated_at", "2019-01-03 14:59:42.115426"], ["user_id", 1], ["category", ""], ["referral", ""]]
+  ↳ app/controllers/jobs_controller.rb:9
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/jobs_controller.rb:9
+Redirected to http://localhost:3000/job-board
+Completed 302 Found in 5ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 08:59:42 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (2.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.3ms)
+Completed 200 OK in 36ms (Views: 20.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE1OjAxOjM1LjM5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fcc046d015a373670a2fd4fe8d0a2330d12321b/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:59:42 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE1OjAxOjM1LjM5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fcc046d015a373670a2fd4fe8d0a2330d12321b", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 09:01:12 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.4ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (13.2ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (24.4ms)
+Completed 200 OK in 245ms (Views: 214.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE1OjAxOjM1LjM5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fcc046d015a373670a2fd4fe8d0a2330d12321b/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 09:01:12 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE1OjAxOjM1LjM5N1oiLCJwdXIiOiJibG9iX2tleSJ9fQ==--8fcc046d015a373670a2fd4fe8d0a2330d12321b", "filename"=>"pete"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms)
+
+

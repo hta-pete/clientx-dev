@@ -735,6 +735,19 @@ form{
       outline:none;
     }
   }
+  select{
+    height:35px;
+    width:100%;
+    background:white;
+    font-size:14px;
+    border:1px solid #ddd;
+    border-radius:5px;
+    padding:0 15px;
+    font-family:"Roboto";
+    &:focus{
+      outline:none;
+    }
+  }
   textarea{
     min-height:320px;
     min-width:100%;
