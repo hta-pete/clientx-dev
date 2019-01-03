@@ -15,7 +15,7 @@
             <% if user_signed_in? %>
         	<div class="avatar flex-v">
         		<span>Welcome, <%= current_user.firstname %></span>
-        		<%= image_tag(current_user.avatar, height: "40", width: "40") %>
+        		<%= image_tag(current_user.avatar.variant(combine_options: {thumbnail: '100x100^', gravity: 'center', extent: '100x100'}), height: "40", width: "40") %>
                 <span><%= link_to "Logout", destroy_user_session_path, method: :delete %></span>
         	</div>
             <% else %>

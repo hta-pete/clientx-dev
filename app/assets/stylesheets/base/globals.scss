@@ -119,8 +119,8 @@ body.sign-in{
   width:7%;
   float:left;
 }
-.col-8{
-  width:8%;
+.col-18{
+  width:18%;
   float:left;
 }
 .col-12{
@@ -535,7 +535,7 @@ footer{
 }
 .cx-list{
   padding:30px 25px 0 25px;
-  .col-5,.col-7,.col-8,.col-12,.col-13,.col-15,.col-10,.col-20,.col-30{
+  .col-5,.col-7,.col-18,.col-12,.col-13,.col-15,.col-10,.col-20,.col-30{
     padding:0 15px;
   }
   .cx-list-header{
@@ -559,7 +559,7 @@ footer{
         color:$secondary;
       }
     }
-    .col-5,.col-7,.col-8,.col-12,.col-13,.col-15,.col-10,.col-20,.col-30{
+    .col-5,.col-7,.col-18,.col-12,.col-13,.col-15,.col-10,.col-20,.col-30{
       height:100px;
       border-right:1px solid rgba(0,0,0,0.08);
     }

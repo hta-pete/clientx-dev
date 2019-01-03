@@ -19,7 +19,7 @@
 		</ul>
 	</div>
 	<div class="page-header-right">
-		<a href="" class="btn_primary">Create Job</a>
+		<%= link_to "Create Job", new_job_path, class: "btn_primary" %>
 	</div>
 </div>
 <div class="cx-list cx-job-list container">
@@ -27,8 +27,7 @@
 		<div class="row clearfix">
 			<div class="col-5 center-align">ID</div>
 			<div class="col-30">Title</div>
-			<div class="col-10">Status</div>
-			<div class="col-8 center-align">Locations</div>
+			<div class="col-18 center-align">Location</div>
 			<div class="col-10">Category</div>
 			<div class="col-13">Referral</div>
 			
@@ -44,16 +43,11 @@
 				<div class="row clearfix">
 					<div class="col-5 flex-all"><%= job.id %></div>
 					<div class="col-30 flex-v"><a href="<%= job_path(job) %>"><%= job.title %></a></div>
-					<div class="col-10 flex-v">
-						<div class="cx-list-toggle-wrap clearfix open">
-							<span class="cx-list-status"></span> <span class="cx-list-toggle"></span>
-						</div>
-					</div>
-					<div class="col-8 flex-all">2</div>
+					<div class="col-18 flex-all"><%= job.location %></div>
 					<div class="col-10 flex-v">Company Driver</div>
 					<div class="col-13 flex-v">Google-Ad</div>
 					
-					<div class="col-12 flex-v">08/23/2018<br> @2:13 pm</div>
+					<div class="col-12 flex-v"><%= job.updated_at %></div>
 					<div class="col-12 flex-v">
 						<ul class="cx-list-actions">
 							<li><i class="fa fa-pencil"></i></li>

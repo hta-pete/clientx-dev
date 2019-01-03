@@ -4511,3 +4511,830 @@ Processing by ActiveStorage::DiskController#show as PNG
 Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
 
 
+Started GET "/job-board" for 127.0.0.1 at 2019-01-02 15:58:02 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.3ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:41
+  Rendered pages/job_board.html.erb within layouts/application (1.9ms)
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (4.3ms)
+Completed 200 OK in 29ms (Views: 25.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljR1YwWlM1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KM0JsZEdVdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZBPT0iLCJleHAiOiIyMDE5LTAxLTAyVDIyOjAwOjE4LjI5MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--71b98dbc445d9aa2a783840c69101a11ccedbe17/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-02 15:58:02 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljR1YwWlM1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KM0JsZEdVdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZBPT0iLCJleHAiOiIyMDE5LTAxLTAyVDIyOjAwOjE4LjI5MVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--71b98dbc445d9aa2a783840c69101a11ccedbe17", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2019-01-02 15:58:05 -0600
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/new.html.erb within layouts/application (2.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (4.0ms)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2019-01-02 15:58:10 -0600
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/new.html.erb within layouts/application (1.2ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.5ms)
+Completed 200 OK in 29ms (Views: 25.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/landing-pages" for 127.0.0.1 at 2019-01-02 15:59:00 -0600
+Processing by PagesController#landing_pages as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/landing_pages.html.erb within layouts/application
+  Rendered pages/landing_pages.html.erb within layouts/application (0.3ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.5ms)
+Completed 200 OK in 23ms (Views: 20.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-02 15:59:02 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:41
+  Rendered pages/job_board.html.erb within layouts/application (2.0ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.4ms)
+Completed 200 OK in 28ms (Views: 24.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2019-01-02 16:05:58 -0600
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/new.html.erb within layouts/application (1.2ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (4.9ms)
+Completed 200 OK in 39ms (Views: 34.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2019-01-02 16:06:21 -0600
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/new.html.erb within layouts/application (1.2ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.8ms)
+Completed 200 OK in 26ms (Views: 22.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4/pete.png" for 127.0.0.1 at 2019-01-02 16:06:21 -0600
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4", "filename"=>"pete"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.4ms) [0m[34mGenerated URL for file at key: EYyyePjCsdmjLCi1kypPvzvA (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljR1YwWlM1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KM0JsZEdVdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZBPT0iLCJleHAiOiIyMDE5LTAxLTAyVDIyOjExOjIxLjM3NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3513dc33696db17b839af62e780147e2875ac5de/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljR1YwWlM1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KM0JsZEdVdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZBPT0iLCJleHAiOiIyMDE5LTAxLTAyVDIyOjExOjIxLjM3NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3513dc33696db17b839af62e780147e2875ac5de/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljR1YwWlM1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KM0JsZEdVdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZBPT0iLCJleHAiOiIyMDE5LTAxLTAyVDIyOjExOjIxLjM3NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3513dc33696db17b839af62e780147e2875ac5de/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-02 16:06:21 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljR1YwWlM1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KM0JsZEdVdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZBPT0iLCJleHAiOiIyMDE5LTAxLTAyVDIyOjExOjIxLjM3NFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--3513dc33696db17b839af62e780147e2875ac5de", "filename"=>"pete"}
+Completed 200 OK in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-03 07:52:04 -0600
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.7ms)
+  [1m[36mActiveStorage::Attachment Load (1.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (1.0ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (69.4ms)
+Completed 200 OK in 496ms (Views: 450.9ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4/pete.png" for 127.0.0.1 at 2019-01-03 07:52:05 -0600
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4", "filename"=>"pete"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (8.9ms) [0m[34mGenerated URL for file at key: EYyyePjCsdmjLCi1kypPvzvA (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljR1YwWlM1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KM0JsZEdVdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZBPT0iLCJleHAiOiIyMDE5LTAxLTAzVDEzOjU3OjA1LjE2MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a83f981a61c932c26b5e70f0f351ecff1a368922/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljR1YwWlM1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KM0JsZEdVdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZBPT0iLCJleHAiOiIyMDE5LTAxLTAzVDEzOjU3OjA1LjE2MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a83f981a61c932c26b5e70f0f351ecff1a368922/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png
+Completed 302 Found in 11ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljR1YwWlM1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KM0JsZEdVdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZBPT0iLCJleHAiOiIyMDE5LTAxLTAzVDEzOjU3OjA1LjE2MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a83f981a61c932c26b5e70f0f351ecff1a368922/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 07:52:05 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkJqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSTdhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGljR1YwWlM1d2JtY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KM0JsZEdVdWNHNW5CanNHVkRvUlkyOXVkR1Z1ZEY5MGVYQmxTU0lPYVcxaFoyVXZjRzVuQmpzR1ZBPT0iLCJleHAiOiIyMDE5LTAxLTAzVDEzOjU3OjA1LjE2MloiLCJwdXIiOiJibG9iX2tleSJ9fQ==--a83f981a61c932c26b5e70f0f351ecff1a368922", "filename"=>"pete"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-03 07:52:34 -0600
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (12.4ms)
+Completed 200 OK in 42ms (Views: 38.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RG5Sb2RXMWlibUZwYkVraURURXdNSGd4TURCZUJqb0dSVlE2REdkeVlYWnBkSGxKSWd0alpXNTBaWElHT3dkVU9ndGxlSFJsYm5SSklnd3hNREI0TVRBd0Jqc0hWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c974a2eecde35cd894360256b5bac8f53de20401/pete.png" for 127.0.0.1 at 2019-01-03 07:52:34 -0600
+Processing by ActiveStorage::RepresentationsController#show as PNG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RG5Sb2RXMWlibUZwYkVraURURXdNSGd4TURCZUJqb0dSVlE2REdkeVlYWnBkSGxKSWd0alpXNTBaWElHT3dkVU9ndGxlSFJsYm5SSklnd3hNREI0TVRBd0Jqc0hWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c974a2eecde35cd894360256b5bac8f53de20401", "filename"=>"pete"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.0ms) [0m[34mChecked if file exists at key: variants/EYyyePjCsdmjLCi1kypPvzvA/3b979a957c74904d98fb8dd020b07d2a09b0facd5c2cd16a0bb14f65e170f5b8 (no)[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+LoadError (cannot load such file -- mini_magick):
+  
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+activesupport (5.2.2) lib/active_support/dependencies.rb:291:in `block in require'
+activesupport (5.2.2) lib/active_support/dependencies.rb:257:in `load_dependency'
+activesupport (5.2.2) lib/active_support/dependencies.rb:291:in `require'
+activestorage (5.2.2) app/models/active_storage/variant.rb:117:in `download_image'
+activestorage (5.2.2) app/models/active_storage/variant.rb:107:in `open_image'
+activestorage (5.2.2) app/models/active_storage/variant.rb:85:in `process'
+activestorage (5.2.2) app/models/active_storage/variant.rb:53:in `processed'
+activestorage (5.2.2) app/controllers/active_storage/representations_controller.rb:12:in `show'
+actionpack (5.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.2) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2019-01-03 07:52:37 -0600
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.4ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RG5Sb2RXMWlibUZwYkVraURURXdNSGd4TURCZUJqb0dSVlE2REdkeVlYWnBkSGxKSWd0alpXNTBaWElHT3dkVU9ndGxlSFJsYm5SSklnd3hNREI0TVRBd0Jqc0hWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c974a2eecde35cd894360256b5bac8f53de20401/pete.png" for 127.0.0.1 at 2019-01-03 07:52:37 -0600
+Processing by ActiveStorage::RepresentationsController#show as PNG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RG5Sb2RXMWlibUZwYkVraURURXdNSGd4TURCZUJqb0dSVlE2REdkeVlYWnBkSGxKSWd0alpXNTBaWElHT3dkVU9ndGxlSFJsYm5SSklnd3hNREI0TVRBd0Jqc0hWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c974a2eecde35cd894360256b5bac8f53de20401", "filename"=>"pete"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.0ms) [0m[34mChecked if file exists at key: variants/EYyyePjCsdmjLCi1kypPvzvA/3b979a957c74904d98fb8dd020b07d2a09b0facd5c2cd16a0bb14f65e170f5b8 (no)[0m
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.1ms)
+
+
+  
+LoadError (cannot load such file -- mini_magick):
+  
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+activesupport (5.2.2) lib/active_support/dependencies.rb:291:in `block in require'
+activesupport (5.2.2) lib/active_support/dependencies.rb:257:in `load_dependency'
+activesupport (5.2.2) lib/active_support/dependencies.rb:291:in `require'
+activestorage (5.2.2) app/models/active_storage/variant.rb:117:in `download_image'
+activestorage (5.2.2) app/models/active_storage/variant.rb:107:in `open_image'
+activestorage (5.2.2) app/models/active_storage/variant.rb:85:in `process'
+activestorage (5.2.2) app/models/active_storage/variant.rb:53:in `processed'
+activestorage (5.2.2) app/controllers/active_storage/representations_controller.rb:12:in `show'
+actionpack (5.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.2) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RG5Sb2RXMWlibUZwYkVraURURXdNSGd4TURCZUJqb0dSVlE2REdkeVlYWnBkSGxKSWd0alpXNTBaWElHT3dkVU9ndGxlSFJsYm5SSklnd3hNREI0TVRBd0Jqc0hWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c974a2eecde35cd894360256b5bac8f53de20401/pete.png" for 127.0.0.1 at 2019-01-03 07:52:47 -0600
+Processing by ActiveStorage::RepresentationsController#show as PNG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RG5Sb2RXMWlibUZwYkVraURURXdNSGd4TURCZUJqb0dSVlE2REdkeVlYWnBkSGxKSWd0alpXNTBaWElHT3dkVU9ndGxlSFJsYm5SSklnd3hNREI0TVRBd0Jqc0hWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c974a2eecde35cd894360256b5bac8f53de20401", "filename"=>"pete"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.0ms) [0m[34mChecked if file exists at key: variants/EYyyePjCsdmjLCi1kypPvzvA/3b979a957c74904d98fb8dd020b07d2a09b0facd5c2cd16a0bb14f65e170f5b8 (no)[0m
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.1ms)
+
+
+  
+LoadError (cannot load such file -- mini_magick):
+  
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+activesupport (5.2.2) lib/active_support/dependencies.rb:291:in `block in require'
+activesupport (5.2.2) lib/active_support/dependencies.rb:257:in `load_dependency'
+activesupport (5.2.2) lib/active_support/dependencies.rb:291:in `require'
+activestorage (5.2.2) app/models/active_storage/variant.rb:117:in `download_image'
+activestorage (5.2.2) app/models/active_storage/variant.rb:107:in `open_image'
+activestorage (5.2.2) app/models/active_storage/variant.rb:85:in `process'
+activestorage (5.2.2) app/models/active_storage/variant.rb:53:in `processed'
+activestorage (5.2.2) app/controllers/active_storage/representations_controller.rb:12:in `show'
+actionpack (5.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.2) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RG5Sb2RXMWlibUZwYkVraURURXdNSGd4TURCZUJqb0dSVlE2REdkeVlYWnBkSGxKSWd0alpXNTBaWElHT3dkVU9ndGxlSFJsYm5SSklnd3hNREI0TVRBd0Jqc0hWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c974a2eecde35cd894360256b5bac8f53de20401/pete.png" for 127.0.0.1 at 2019-01-03 07:54:37 -0600
+Processing by ActiveStorage::RepresentationsController#show as PNG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RG5Sb2RXMWlibUZwYkVraURURXdNSGd4TURCZUJqb0dSVlE2REdkeVlYWnBkSGxKSWd0alpXNTBaWElHT3dkVU9ndGxlSFJsYm5SSklnd3hNREI0TVRBd0Jqc0hWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c974a2eecde35cd894360256b5bac8f53de20401", "filename"=>"pete"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.0ms) [0m[34mChecked if file exists at key: variants/EYyyePjCsdmjLCi1kypPvzvA/3b979a957c74904d98fb8dd020b07d2a09b0facd5c2cd16a0bb14f65e170f5b8 (no)[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+
+  
+LoadError (cannot load such file -- mini_magick):
+  
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+activesupport (5.2.2) lib/active_support/dependencies.rb:291:in `block in require'
+activesupport (5.2.2) lib/active_support/dependencies.rb:257:in `load_dependency'
+activesupport (5.2.2) lib/active_support/dependencies.rb:291:in `require'
+activestorage (5.2.2) app/models/active_storage/variant.rb:117:in `download_image'
+activestorage (5.2.2) app/models/active_storage/variant.rb:107:in `open_image'
+activestorage (5.2.2) app/models/active_storage/variant.rb:85:in `process'
+activestorage (5.2.2) app/models/active_storage/variant.rb:53:in `processed'
+activestorage (5.2.2) app/controllers/active_storage/representations_controller.rb:12:in `show'
+actionpack (5.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.2) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RG5Sb2RXMWlibUZwYkVraURURXdNSGd4TURCZUJqb0dSVlE2REdkeVlYWnBkSGxKSWd0alpXNTBaWElHT3dkVU9ndGxlSFJsYm5SSklnd3hNREI0TVRBd0Jqc0hWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c974a2eecde35cd894360256b5bac8f53de20401/pete.png" for 127.0.0.1 at 2019-01-03 07:54:39 -0600
+Processing by ActiveStorage::RepresentationsController#show as PNG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RG5Sb2RXMWlibUZwYkVraURURXdNSGd4TURCZUJqb0dSVlE2REdkeVlYWnBkSGxKSWd0alpXNTBaWElHT3dkVU9ndGxlSFJsYm5SSklnd3hNREI0TVRBd0Jqc0hWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c974a2eecde35cd894360256b5bac8f53de20401", "filename"=>"pete"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.0ms) [0m[34mChecked if file exists at key: variants/EYyyePjCsdmjLCi1kypPvzvA/3b979a957c74904d98fb8dd020b07d2a09b0facd5c2cd16a0bb14f65e170f5b8 (no)[0m
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+LoadError (cannot load such file -- mini_magick):
+  
+bootsnap (1.3.2) lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:32:in `require'
+activesupport (5.2.2) lib/active_support/dependencies.rb:291:in `block in require'
+activesupport (5.2.2) lib/active_support/dependencies.rb:257:in `load_dependency'
+activesupport (5.2.2) lib/active_support/dependencies.rb:291:in `require'
+activestorage (5.2.2) app/models/active_storage/variant.rb:117:in `download_image'
+activestorage (5.2.2) app/models/active_storage/variant.rb:107:in `open_image'
+activestorage (5.2.2) app/models/active_storage/variant.rb:85:in `process'
+activestorage (5.2.2) app/models/active_storage/variant.rb:53:in `processed'
+activestorage (5.2.2) app/controllers/active_storage/representations_controller.rb:12:in `show'
+actionpack (5.2.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.2) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.2) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.2) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.2) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.2) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.2) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.8) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.8) lib/warden/manager.rb:34:in `catch'
+warden (1.2.8) lib/warden/manager.rb:34:in `call'
+rack (2.0.6) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+actionpack (5.2.2) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.0.6) lib/rack/session/abstract/id.rb:232:in `context'
+rack (2.0.6) lib/rack/session/abstract/id.rb:226:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/method_override.rb:22:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/rails/active_storage/representations/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RG5Sb2RXMWlibUZwYkVraURURXdNSGd4TURCZUJqb0dSVlE2REdkeVlYWnBkSGxKSWd0alpXNTBaWElHT3dkVU9ndGxlSFJsYm5SSklnd3hNREI0TVRBd0Jqc0hWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c974a2eecde35cd894360256b5bac8f53de20401/pete.png" for 127.0.0.1 at 2019-01-03 07:55:09 -0600
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by ActiveStorage::RepresentationsController#show as PNG
+  Parameters: {"signed_blob_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0990e0b52f34edb86f3940150b4ad3546c7afae4", "variation_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCam9VWTI5dFltbHVaVjl2Y0hScGIyNXpld2c2RG5Sb2RXMWlibUZwYkVraURURXdNSGd4TURCZUJqb0dSVlE2REdkeVlYWnBkSGxKSWd0alpXNTBaWElHT3dkVU9ndGxlSFJsYm5SSklnd3hNREI0TVRBd0Jqc0hWQT09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--c974a2eecde35cd894360256b5bac8f53de20401", "filename"=>"pete"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.0ms) [0m[34mChecked if file exists at key: variants/EYyyePjCsdmjLCi1kypPvzvA/3b979a957c74904d98fb8dd020b07d2a09b0facd5c2cd16a0bb14f65e170f5b8 (no)[0m
+[36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: EYyyePjCsdmjLCi1kypPvzvA[0m
+[36m  Disk Storage (3.4ms) [0m[32mUploaded file to key: variants/EYyyePjCsdmjLCi1kypPvzvA/3b979a957c74904d98fb8dd020b07d2a09b0facd5c2cd16a0bb14f65e170f5b8[0m
+[36m  Disk Storage (2.9ms) [0m[34mGenerated URL for file at key: variants/EYyyePjCsdmjLCi1kypPvzvA/3b979a957c74904d98fb8dd020b07d2a09b0facd5c2cd16a0bb14f65e170f5b8 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjAwOjA5LjEyNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bae67e385cd621296a4991b893bffe5a2f902cef/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjAwOjA5LjEyNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bae67e385cd621296a4991b893bffe5a2f902cef/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png
+Completed 302 Found in 94ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjAwOjA5LjEyNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bae67e385cd621296a4991b893bffe5a2f902cef/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 07:55:09 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjAwOjA5LjEyNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bae67e385cd621296a4991b893bffe5a2f902cef", "filename"=>"pete"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-01-03 07:55:12 -0600
+Processing by PagesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (13.7ms)
+Completed 200 OK in 193ms (Views: 165.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjAwOjA5LjEyNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bae67e385cd621296a4991b893bffe5a2f902cef/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 07:55:12 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjAwOjA5LjEyNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bae67e385cd621296a4991b893bffe5a2f902cef", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 07:55:27 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (14.9ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:41
+  Rendered pages/job_board.html.erb within layouts/application (20.7ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.2ms)
+Completed 200 OK in 80ms (Views: 23.3ms | ActiveRecord: 15.7ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 07:56:12 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:41
+  Rendered pages/job_board.html.erb within layouts/application (1.2ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.0ms)
+Completed 200 OK in 25ms (Views: 20.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjAwOjA5LjEyNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bae67e385cd621296a4991b893bffe5a2f902cef/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 07:56:12 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjAwOjA5LjEyNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bae67e385cd621296a4991b893bffe5a2f902cef", "filename"=>"pete"}
+Completed 304 Not Modified in 0ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 07:57:31 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (1.1ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.1ms)
+Completed 200 OK in 23ms (Views: 20.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjAwOjA5LjEyNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bae67e385cd621296a4991b893bffe5a2f902cef/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 07:57:31 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjAwOjA5LjEyNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bae67e385cd621296a4991b893bffe5a2f902cef", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 07:58:54 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (1.2ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.0ms)
+Completed 200 OK in 416ms (Views: 399.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjAwOjA5LjEyNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bae67e385cd621296a4991b893bffe5a2f902cef/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 07:58:54 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjAwOjA5LjEyNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bae67e385cd621296a4991b893bffe5a2f902cef", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 07:59:20 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (1.6ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (4.3ms)
+Completed 200 OK in 311ms (Views: 306.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjAwOjA5LjEyNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bae67e385cd621296a4991b893bffe5a2f902cef/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 07:59:20 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjAwOjA5LjEyNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bae67e385cd621296a4991b893bffe5a2f902cef", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 07:59:40 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.1ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (1.6ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.2ms)
+Completed 200 OK in 26ms (Views: 22.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjAwOjA5LjEyNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bae67e385cd621296a4991b893bffe5a2f902cef/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 07:59:40 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjAwOjA5LjEyNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bae67e385cd621296a4991b893bffe5a2f902cef", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/job-board" for 127.0.0.1 at 2019-01-03 08:00:06 -0600
+Processing by PagesController#job_board as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/pages_controller.rb:24
+  Rendering pages/job_board.html.erb within layouts/application
+  [1m[36mJob Load (0.2ms)[0m  [1m[34mSELECT "jobs".* FROM "jobs" ORDER BY created_at DESC[0m
+  ↳ app/views/pages/job_board.html.erb:40
+  Rendered pages/job_board.html.erb within layouts/application (1.3ms)
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.2ms)
+Completed 200 OK in 25ms (Views: 21.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjAwOjA5LjEyNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bae67e385cd621296a4991b893bffe5a2f902cef/pete.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22pete.png%22%3B+filename%2A%3DUTF-8%27%27pete.png" for 127.0.0.1 at 2019-01-03 08:00:06 -0600
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"pete.png\"; filename*=UTF-8''pete.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSm5kbUZ5YVdGdWRITXZSVmw1ZVdWUWFrTnpaRzFxVEVOcE1XdDVjRkIyZW5aQkx6TmlPVGM1WVRrMU4yTTNORGt3TkdRNU9HWmlPR1JrTURJd1lqQTNaREpoTURsaU1HWmhZMlExWXpKalpERTJZVEJpWWpFMFpqWTFaVEUzTUdZMVlqZ0dPZ1pGVkRvUVpHbHpjRzl6YVhScGIyNUpJanRwYm14cGJtVTdJR1pwYkdWdVlXMWxQU0p3WlhSbExuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuY0dWMFpTNXdibWNHT3daVU9oRmpiMjUwWlc1MFgzUjVjR1ZKSWc1cGJXRm5aUzl3Ym1jR093WlUiLCJleHAiOiIyMDE5LTAxLTAzVDE0OjAwOjA5LjEyNVoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--bae67e385cd621296a4991b893bffe5a2f902cef", "filename"=>"pete"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/jobs/new" for 127.0.0.1 at 2019-01-03 08:00:26 -0600
+Processing by JobsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/jobs_controller.rb:4
+  Rendering jobs/new.html.erb within layouts/application
+  Rendered jobs/new.html.erb within layouts/application (26.3ms)
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "User"], ["name", "avatar"], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/shared/_header.html.erb:18
+  Rendered shared/_header.html.erb (3.4ms)
+Completed 200 OK in 66ms (Views: 46.9ms | ActiveRecord: 0.3ms)
+
+
